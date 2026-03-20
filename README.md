@@ -28,4 +28,4 @@ A simple app to download and watch Panopto videos offline.
 
 🚧 Under development
 
-**Progress:** Playback speed and size controls are now complete! You can adjust video speed (0.5x to 2x), resize the player (small, medium, large), and go fullscreen. The video player is fully functional with all playback features.
+**Progress:** Storage and offline support is being implemented. Videos can now be cached in your browser for offline viewing. Playback controls are gated until downloads complete to ensure smooth offline playback.

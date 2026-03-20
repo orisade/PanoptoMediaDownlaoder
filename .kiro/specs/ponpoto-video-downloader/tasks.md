@@ -188,8 +188,8 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
 - [ ] 10. Checkpoint - Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 11. Implement Storage and Offline Support
-  - [ ] 11.1 Implement Storage Manager with IndexedDB
+- [x] 11. Implement Storage and Offline Support
+  - [x] 11.1 Implement Storage Manager with IndexedDB
     - Create saveVideo() to store blobs in IndexedDB
     - Create getVideo() to retrieve blobs from IndexedDB
     - Create hasVideo() to check cache existence
@@ -200,7 +200,7 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
     - **Property 14: Storage Persistence Round Trip**
     - **Validates: Requirements 11.2, 11.6**
   
-  - [ ] 11.3 Implement playback control gating
+  - [x] 11.3 Implement playback control gating
     - Disable playback controls until download is complete
     - Enable controls only when downloadStatus is 'complete'
     - _Requirements: 11.1, 11.5, 11.7, 11.8_

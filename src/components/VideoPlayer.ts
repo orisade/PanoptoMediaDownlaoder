@@ -4,6 +4,7 @@ export interface VideoPlayerComponent {
   mode: 'dual' | 'single';
   isPlaying: boolean;
   currentSpeed: number;
+  controlsEnabled: boolean;
   
   loadVideos(videos: VideoBlob[]): void;
   setMode(mode: 'dual' | 'single'): void;
@@ -17,6 +18,8 @@ export interface VideoPlayerComponent {
   swapVideos(): void;
   togglePrimary(): void;
   syncVideos(): void;
+  enableControls(): void;
+  disableControls(): void;
   
   onTimeUpdate: ((currentTime: number, duration: number) => void) | null;
 }
@@ -27,6 +30,7 @@ export class VideoPlayer implements VideoPlayerComponent {
   mode: 'dual' | 'single' = 'dual';
   isPlaying = false;
   currentSpeed = 1;
+  controlsEnabled = false;
   
   private container: HTMLElement;
   private videoContainer: HTMLElement;
@@ -208,6 +212,7 @@ export class VideoPlayer implements VideoPlayerComponent {
   }
 
   play(): void {
+    if (!this.controlsEnabled) return;
     this.syncVideos();
     this.video1.play();
     if (this.mode === 'dual') {
@@ -217,6 +222,7 @@ export class VideoPlayer implements VideoPlayerComponent {
   }
   
   pause(): void {
+    if (!this.controlsEnabled) return;
     this.video1.pause();
     if (this.mode === 'dual') {
       this.video2.pause();
@@ -225,6 +231,7 @@ export class VideoPlayer implements VideoPlayerComponent {
   }
   
   stop(): void {
+    if (!this.controlsEnabled) return;
     this.video1.pause();
     this.video1.currentTime = 0;
     if (this.mode === 'dual') {
@@ -235,6 +242,7 @@ export class VideoPlayer implements VideoPlayerComponent {
   }
   
   seek(timeSeconds: number): void {
+    if (!this.controlsEnabled) return;
     this.video1.currentTime = timeSeconds;
     if (this.mode === 'dual') {
       this.video2.currentTime = timeSeconds;
@@ -304,6 +312,34 @@ export class VideoPlayer implements VideoPlayerComponent {
     this.wrapper2.classList.toggle('primary');
   }
   
+  enableControls(): void {
+    this.controlsEnabled = true;
+    this.playPauseBtn.disabled = false;
+    this.stopBtn.disabled = false;
+    this.swapBtn.disabled = false;
+    this.togglePrimaryBtn.disabled = false;
+    this.progressBar.style.pointerEvents = 'auto';
+    this.speedBtns.forEach(btn => btn.disabled = false);
+    this.sizeBtns.small.disabled = false;
+    this.sizeBtns.medium.disabled = false;
+    this.sizeBtns.large.disabled = false;
+    this.fullscreenBtn.disabled = false;
+  }
+  
+  disableControls(): void {
+    this.controlsEnabled = false;
+    this.playPauseBtn.disabled = true;
+    this.stopBtn.disabled = true;
+    this.swapBtn.disabled = true;
+    this.togglePrimaryBtn.disabled = true;
+    this.progressBar.style.pointerEvents = 'none';
+    this.speedBtns.forEach(btn => btn.disabled = true);
+    this.sizeBtns.small.disabled = true;
+    this.sizeBtns.medium.disabled = true;
+    this.sizeBtns.large.disabled = true;
+    this.fullscreenBtn.disabled = true;
+  }
+  
   // Getters for testing
   getVideo1(): HTMLVideoElement {
     return this.video1;
@@ -327,6 +363,14 @@ export class VideoPlayer implements VideoPlayerComponent {
   
   getTogglePrimaryButton(): HTMLButtonElement {
     return this.togglePrimaryBtn;
+  }
+  
+  getPlayPauseButton(): HTMLButtonElement {
+    return this.playPauseBtn;
+  }
+  
+  getStopButton(): HTMLButtonElement {
+    return this.stopBtn;
   }
 }
 
