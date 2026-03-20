@@ -6,14 +6,14 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
 
 ## Tasks
 
-- [ ] 1. Set up project structure and core types
-  - [ ] 1.1 Create project directory structure and configuration files
+- [x] 1. Set up project structure and core types
+  - [x] 1.1 Create project directory structure and configuration files
     - Set up TypeScript configuration (tsconfig.json)
     - Set up build tooling (Vite or similar bundler)
     - Set up testing framework (Vitest with fast-check)
     - _Requirements: N/A (infrastructure)_
   
-  - [ ] 1.2 Define core TypeScript interfaces and types
+  - [x] 1.2 Define core TypeScript interfaces and types
     - Create types for FormatDetectionResult, VideoTypeResult, VideoStream
     - Create types for DownloadProgress, DownloadResult, VideoBlob
     - Create types for AppState, AppError, and error type union

@@ -27,3 +27,5 @@ A simple app to download and watch Panopto videos offline.
 ## Status
 
 🚧 Under development
+
+**Progress:** Project setup complete - TypeScript configuration and core types defined.
