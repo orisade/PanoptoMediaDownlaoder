@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Git Commit After Task",
+  "description": "Automatically commits changes to git and pushes to remote after each spec task is completed. Also updates the README with progress.",
+  "version": "1",
+  "when": {
+    "type": "postTaskExecution"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A task was just completed. Please:\n1. Read the tasks.md file to identify which task was just completed\n2. Update the README.md \"Status\" section to reflect current progress (keep it simple and non-technical)\n3. Stage all changes with: git add -A\n4. Commit with a message describing the completed task\n5. Push to origin with: git push origin master (or main)\n\nKeep the README updates simple and user-friendly."
+  }
+}
