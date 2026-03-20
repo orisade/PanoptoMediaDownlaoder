@@ -89,18 +89,18 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
     - **Property 6: Successful Download Loads Videos**
     - **Validates: Requirements 4.3, 5.4**
 
-- [ ] 6. Implement HLS Processing
-  - [ ] 6.1 Implement HLS Playlist Parser
+- [x] 6. Implement HLS Processing
+  - [x] 6.1 Implement HLS Playlist Parser
     - Create parsePlaylist() function to extract segment URLs from m3u8
     - Handle both relative and absolute URLs
     - _Requirements: 5.1_
   
-  - [ ] 6.2 Implement HLS Segment Downloader
+  - [x] 6.2 Implement HLS Segment Downloader
     - Download all TS segments with progress reporting
     - Handle individual segment failures with specific error messages
     - _Requirements: 5.1, 5.2, 5.5_
   
-  - [ ] 6.3 Implement HLS Segment Concatenation
+  - [x] 6.3 Implement HLS Segment Concatenation
     - Create concatenateSegments() function to merge ArrayBuffers into single Blob
     - Set correct MIME type (video/mp2t)
     - _Requirements: 5.3_

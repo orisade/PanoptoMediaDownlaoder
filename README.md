@@ -28,4 +28,4 @@ A simple app to download and watch Panopto videos offline.
 
 🚧 Under development
 
-**Progress:** Download manager and progress bar implemented - the app can now download MP4 videos with real-time progress updates. You'll see a progress bar while videos download.
+**Progress:** HLS video support added! The app can now download both MP4 videos and HLS streaming videos (.ts segments). Downloads show real-time progress as segments are fetched and combined.
