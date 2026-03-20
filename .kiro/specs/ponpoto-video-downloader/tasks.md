@@ -21,14 +21,14 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
     - Create types for MediaDirectoryStructure, DownloadDirectory, DownloadedFile
     - _Requirements: 2.1, 2.2, 2.3, 3.1, 3.2, 3.3, 12.1, 15.1, 15.2_
 
-- [ ] 2. Implement URL Input and Validation
-  - [ ] 2.1 Create URL Input Component
+- [x] 2. Implement URL Input and Validation
+  - [x] 2.1 Create URL Input Component
     - Create HTML structure for URL input field and download button
     - Implement getURL(), setError(), clearError(), setLoading() methods
     - Wire up onDownloadClick event handler
     - _Requirements: 1.1, 1.2_
   
-  - [ ] 2.2 Implement URL validation logic
+  - [x] 2.2 Implement URL validation logic
     - Validate empty URL returns EMPTY_URL error
     - Validate invalid URL format returns INVALID_URL error
     - _Requirements: 1.3, 1.4_
