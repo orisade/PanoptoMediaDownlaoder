@@ -37,8 +37,8 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
     - **Property 1: URL Validation Rejects Invalid Inputs**
     - **Validates: Requirements 1.3, 1.4**
 
-- [ ] 3. Implement Format and Type Detection
-  - [ ] 3.1 Implement Format Detector
+- [-] 3. Implement Format and Type Detection
+  - [x] 3.1 Implement Format Detector
     - Create detectFormat() function that analyzes URL response
     - Detect MP4 format when .mp4 files found in response
     - Detect HLS format when .ts segments or .m3u8 playlists found
@@ -49,7 +49,7 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
     - **Property 2: Format Detection Correctly Identifies Video Format**
     - **Validates: Requirements 2.2, 2.3**
   
-  - [ ] 3.3 Implement Video Type Detector
+  - [x] 3.3 Implement Video Type Detector
     - Create detectType() function that counts video streams
     - Return 'single' when one stream detected
     - Return 'dual' when two streams detected

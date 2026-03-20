@@ -28,4 +28,4 @@ A simple app to download and watch Panopto videos offline.
 
 🚧 Under development
 
-**Progress:** URL input component and validation implemented - you can now enter URLs and get helpful error messages.
+**Progress:** Format and video type detection implemented - the app can now automatically detect whether a video is MP4 or HLS format, and whether it's a single or dual video.
