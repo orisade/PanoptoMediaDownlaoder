@@ -3,3 +3,6 @@ export type { URLInputComponent } from './URLInput';
 
 export { createProgressBarComponent, progressBarStyles } from './ProgressBar';
 export type { ProgressBarComponent } from './ProgressBar';
+
+export { VideoPlayer, createVideoPlayer } from './VideoPlayer';
+export type { VideoPlayerComponent } from './VideoPlayer';

@@ -28,4 +28,4 @@ A simple app to download and watch Panopto videos offline.
 
 🚧 Under development
 
-**Progress:** HLS video support added! The app can now download both MP4 videos and HLS streaming videos (.ts segments). Downloads show real-time progress as segments are fetched and combined.
+**Progress:** Video Player component complete! You can now play downloaded videos with full playback controls including play/pause, stop, seek, speed control, and size options. Dual video mode supports synchronized playback with swap and toggle primary features.
