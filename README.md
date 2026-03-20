@@ -28,4 +28,4 @@ A simple app to download and watch Panopto videos offline.
 
 🚧 Under development
 
-**Progress:** Video Player component complete! You can now play downloaded videos with full playback controls including play/pause, stop, seek, speed control, and size options. Dual video mode supports synchronized playback with swap and toggle primary features.
+**Progress:** Playback speed and size controls are now complete! You can adjust video speed (0.5x to 2x), resize the player (small, medium, large), and go fullscreen. The video player is fully functional with all playback features.

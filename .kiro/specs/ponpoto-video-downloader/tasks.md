@@ -161,8 +161,8 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
     - **Property 12: Single Mode Hides Dual-Specific Controls**
     - **Validates: Requirements 7.4**
 
-- [ ] 9. Implement Playback Speed and Size Controls
-  - [ ] 9.1 Implement speed control
+- [x] 9. Implement Playback Speed and Size Controls
+  - [x] 9.1 Implement speed control
     - Create speed buttons for 0.5x, 1x, 1.25x, 1.5x, 2x
     - Implement setSpeed() to change playbackRate on all videos
     - Visually indicate selected speed
@@ -172,7 +172,7 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
     - **Property 10: Speed Control Applies to All Videos**
     - **Validates: Requirements 8.2**
   
-  - [ ] 9.3 Implement size control
+  - [x] 9.3 Implement size control
     - Create size buttons for small, medium, large
     - Implement setSize() to change container max-width
     - _Requirements: 9.1, 9.2_
@@ -181,7 +181,7 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
     - **Property 11: Size Control Updates Container**
     - **Validates: Requirements 9.2**
   
-  - [ ] 9.5 Implement fullscreen functionality
+  - [x] 9.5 Implement fullscreen functionality
     - Implement enterFullscreen() using requestFullscreen API
     - _Requirements: 9.3, 9.4_
 
