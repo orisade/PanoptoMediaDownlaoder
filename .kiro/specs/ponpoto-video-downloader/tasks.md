@@ -37,7 +37,7 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
     - **Property 1: URL Validation Rejects Invalid Inputs**
     - **Validates: Requirements 1.3, 1.4**
 
-- [-] 3. Implement Format and Type Detection
+- [x] 3. Implement Format and Type Detection
   - [x] 3.1 Implement Format Detector
     - Create detectFormat() function that analyzes URL response
     - Detect MP4 format when .mp4 files found in response
@@ -59,16 +59,16 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
     - **Property 3: Video Type Detection Based on Stream Count**
     - **Validates: Requirements 3.2, 3.3**
 
-- [ ] 4. Checkpoint - Ensure all tests pass
+- [x] 4. Checkpoint - Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 5. Implement Download Manager and Progress Reporting
-  - [ ] 5.1 Create Progress Bar Component
+- [x] 5. Implement Download Manager and Progress Reporting
+  - [x] 5.1 Create Progress Bar Component
     - Create HTML structure for progress bar and status message
     - Implement show(), hide(), setProgress(), setMessage(), setSegmentInfo() methods
     - _Requirements: 4.2, 5.2, 10.1, 10.2, 11.3, 11.4_
   
-  - [ ] 5.2 Implement Download Manager core
+  - [x] 5.2 Implement Download Manager core
     - Create download() function that orchestrates the download process
     - Implement cancel() function to abort in-progress downloads
     - Integrate with Format Detector and Type Detector
@@ -79,7 +79,7 @@ This implementation plan converts the Ponpoto Video Downloader design into actio
     - **Property 5: Download Progress Reporting**
     - **Validates: Requirements 4.2, 5.2, 10.2, 11.3, 11.4**
   
-  - [ ] 5.4 Implement MP4 download functionality
+  - [x] 5.4 Implement MP4 download functionality
     - Download MP4 files directly using Fetch API
     - Create blob URLs for downloaded videos
     - Handle download errors with appropriate error types
